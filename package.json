@@ -1,5 +1,5 @@
 {
-  "name": "smart-pdf",
+  "name": "smart-pdf-js",
   "version": "1.0.0",
   "description": "A powerful and easy-to-use library to generate PDFs from DOM elements, with support for OKLCH colors and multi-page documents.",
   "main": "src/index.js",
