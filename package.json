@@ -1,0 +1,28 @@
+{
+  "name": "smart-pdf",
+  "version": "1.0.0",
+  "description": "A powerful and easy-to-use library to generate PDFs from DOM elements, with support for OKLCH colors and multi-page documents.",
+  "main": "src/index.js",
+  "keywords": [
+    "pdf",
+    "html2canvas",
+    "jspdf",
+    "dom-to-pdf",
+    "oklch",
+    "pdf-generation"
+  ],
+  "author": "Rashedul Haque Rasel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RashedulHaqueRasel1/smart-pdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RashedulHaqueRasel1/smart-pdf/issues"
+  },
+  "homepage": "https://github.com/RashedulHaqueRasel1/smart-pdf#readme",
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
+  }
+}
