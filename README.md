@@ -1,23 +1,27 @@
-# Smart PDF
+# Smart PDF JS
 
-[![npm version](https://img.shields.io/npm/v/smart-pdf.svg)](https://www.npmjs.com/package/smart-pdf)
+[![npm version](https://img.shields.io/npm/v/smart-pdf-js.svg)](https://www.npmjs.com/package/smart-pdf-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://img.shields.io/npm/dt/smart-pdf.svg)](https://www.npmjs.com/package/smart-pdf)
+[![Downloads](https://img.shields.io/npm/dt/smart-pdf-js.svg)](https://www.npmjs.com/package/smart-pdf-js)
 
 **The ultimate DOM-to-PDF solution for modern web applications.**
 
-`smart-pdf` is a powerful, lightweight, and developer-friendly wrapper around `html2canvas` and `jspdf`. It simplifies the complex process of generating multi-page PDFs from HTML, making it easy to turn your React, Next.js, or vanilla JavaScript web pages into professional-quality PDF documents.
+`smart-pdf-js` is a powerful, lightweight, and developer-friendly wrapper around `html2canvas` and `jspdf`. It simplifies the complex process of generating multi-page PDFs from HTML, making it easy to turn your React, Next.js, or vanilla JavaScript web pages into professional-quality PDF documents.
 
-Unlike standard libraries, `smart-pdf` comes with built-in support for modern CSS features like **OKLCH colors**, ensuring your PDF looks exactly as intended.
+Unlike standard libraries, `smart-pdf-js` handles everything for you. **You do not need to install or configure** `html2canvas`, `jspdf`, or `dom-to-pdf` separately. One command gets you a complete PDF generation solution that even handles modern CSS features like **OKLCH colors** automatically.
+
+With `smart-pdf-js`, you get a **simpler, streamlined workflow** compared to other solutions, letting you generate professional PDFs with features like **automatic page numbering** and customizable filenames right out of the box.
 
 ---
 
 ## Key Features
 
 - **Multi-page Generation**: Effortlessly split your content across multiple pages using simple CSS selectors.
+- **Automatic Page Numbering**: Built-in support for adding page numbers to your multi-page documents.
+- **All-in-One Solution**: No need to juggle multiple libraries. Installing `smart-pdf-js` includes everything you need.
 - ** OKLCH Color Support**: First-class support for modern CSS color spaces, automatically converting OKLCH to RGB for perfect rendering.
 - ** React & Next.js Ready**: Designed to work seamlessly with modern component-based frameworks.
-- ** Highly Configurable**: Full control over margins, orientation, formats (A4, Letter, etc.), and image quality.
+- ** Highly Configurable**: Full control over **output filenames**, margins, orientation, formats (A4, Letter, etc.), and image quality.
 - ** Lightweight**: Zero configuration needed for most use cases—just install and generate.
 
 ---
@@ -28,7 +32,7 @@ Install the package via npm, yarn, or pnpm:
 
 ```bash
 # npm
-npm install smart-pdf
+npm install smart-pdf-js
 
 ```
 
@@ -38,10 +42,10 @@ npm install smart-pdf
 
 ### 1. Vanilla JavaScript / Basic Usage
 
-The simplest way to use `smart-pdf` is to define the sections you want to capture and call `generatePDF`.
+The simplest way to use `smart-pdf-js` is to define the sections you want to capture and call `generatePDF`.
 
 ```javascript
-import { generatePDF } from "smart-pdf";
+import { generatePDF } from "smart-pdf-js";
 
 const config = {
   filename: "monthly-report.pdf",
@@ -74,7 +78,7 @@ In React, you can use `useRef` to target elements, but using unique IDs or class
 
 ```jsx
 import React from "react";
-import { generatePDF } from "smart-pdf";
+import { generatePDF } from "smart-pdf-js";
 
 const PDFReport = () => {
   const handleDownload = async () => {
@@ -116,7 +120,7 @@ export default PDFReport;
 
 ### 3. Using with Next.js (App Router & Pages Router)
 
-Since `smart-pdf` relies on browser APIs (`window`, `document`), it must be dynamically imported with `ssr: false` or used inside `useEffect` / event handlers to avoid Server-Side Rendering (SSR) errors like `ReferenceError: document is not defined`.
+Since `smart-pdf-js` relies on browser APIs (`window`, `document`), it must be dynamically imported with `ssr: false` or used inside `useEffect` / event handlers to avoid Server-Side Rendering (SSR) errors like `ReferenceError: document is not defined`.
 
 #### Method A: Inside a Client Component (Recommended for App Router)
 
@@ -128,12 +132,12 @@ import React from "react";
 // You can import directly if function is called on an event (click)
 // as the import will be resolved on the client.
 
-import { generatePDF } from "smart-pdf";
+import { generatePDF } from "smart-pdf-js";
 
 export default function InvoicePage() {
   const downloadInvoice = async () => {
     // Alternatively, dynamic import inside the function for cleaner bundle splitting
-    // const { generatePDF } = await import('smart-pdf');
+    // const { generatePDF } = await import('smart-pdf-js');
 
     await generatePDF({
       filename: "invoice-123.pdf",
@@ -206,3 +210,11 @@ The `generatePDF(config)` function accepts a configuration object.
 ## 📄 License
 
 MIT © [Rashedul Haque Rasel](https://github.com/RashedulHaqueRasel1)
+
+## 🧑‍💻 Author
+
+**Rashedul Haque Rasel**
+
+📧 **Email:** [rashedulhaquerasel1@gmail.com](mailto:rashedulhaquerasel1@gmail.com)  
+🌐 **Portfolio:** [View Portfolio](https://rashedul-haque-rasel.vercel.app)  
+💼 **LinkedIn:** [View LinkedIn Profile](https://www.linkedin.com/in/rashedul-haque-rasel)
